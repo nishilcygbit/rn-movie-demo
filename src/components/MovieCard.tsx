@@ -105,7 +105,7 @@ const MovieCard = (props: any): JSX.Element => {
             <TouchableOpacity
               style={[Styles.posa, Styles.readMore]}
               onPress={() => {
-                navigation.navigate('MovieDetails');
+                navigation.navigate('MovieDetails', id);
               }}
             >
               <Text
