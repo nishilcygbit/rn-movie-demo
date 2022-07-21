@@ -16,30 +16,6 @@ const MovieList = ({ navigation }: any): JSX.Element => {
   const [loading, setLoading] = useState<boolean>(false);
   const [handleRefresh, setHandleRefresh] = useState<string>('0');
 
-  // const handleUpcomingMovies = async () => {
-  //   try {
-  //     const res = await ApiServies.upcomingMovies();
-  //     console.log('res', JSON.stringify(res, null, 4));
-  //     if (res?.results) {
-  //       setMovies(res?.results);
-  //     }
-  //   } catch (error) {
-  //     console.log('error', error);
-  //   }
-  // };
-
-  // const handleTopRatedMovies = async () => {
-  //   try {
-  //     const res = await ApiServies.topRated();
-  //     console.log('res', JSON.stringify(res, null, 4));
-  //     if (res?.results) {
-  //       setMovies(res?.results);
-  //     }
-  //   } catch (error) {
-  //     console.log('error', error);
-  //   }
-  // };
-
   const handleGetMoviesForAllApi = async (type: any, loading = true) => {
     try {
       setLoading(loading);
@@ -68,7 +44,7 @@ const MovieList = ({ navigation }: any): JSX.Element => {
     },
     {
       sort: '3',
-      name: 'Up Coming',
+      name: 'Upcoming',
       getMoviesforTab: () => handleGetMoviesForAllApi(ApiServies.upcomingMovies()),
     },
     {
